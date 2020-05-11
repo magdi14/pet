@@ -46,7 +46,7 @@
       - you can access the script by entering endpoint called:
         - `/auctions`
          - Method: GET
-         - Description: List all bids created by users to store owner.
+         - Description: calculate the amount to be paid by the winner and the losing bidders.
          - Operation: auctionsCalc
          - Response: 
             - Prints in the console the results of bids for a given `bids` array and `name` array accordingly the [Generalized second-price auction](https://en.wikipedia.org/wiki/Generalized_second-price_auction) mechanism.
