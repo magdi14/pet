@@ -1,7 +1,7 @@
 const Bid = require("../../database/models/Bid");
 
 function auctions() {
-  const bids = [500, 500, 500, 500];
+  const bids = [100, 500, 280, 320];
   const names = [
     "John Doe",
     "John Smith",
@@ -35,13 +35,12 @@ function auctions() {
       }
     }
   }
-  for (i = 0; i < n; i++) {
-    console.log(all[i]["name"] + ": " + all[i]["bid"]);
-  }
-  if(tie)
+  // for (i = 0; i < n; i++) {
+  //   console.log(all[i]["name"] + ": " + all[i]["bid"]);
+  // }
+  if(!n)
   {
     console.log("No Winners")
-    console.log(tie)
   } else{
     for(i=0; i<n; i++){
       if(items !== 0){
@@ -52,8 +51,9 @@ function auctions() {
       }
     }
   }
-  // console.log(tie);
+  return 1;
 }
+
 module.exports = {
   index: (req, res) => {
     Bid.find({}, function (error, Bids) {

@@ -1,7 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const permissionsCtrl = require("../app/controllers/PermissionsController");
-const rolesCtrl = require("../app/controllers/RolesController");
 const bidsCtrl = require("../app/controllers/BidsController");
 const usersCtrl = require("../app/controllers/UsersController");
 const petsCtrl = require("../app/controllers/PetsController");
@@ -11,6 +9,7 @@ const petsCtrl = require("../app/controllers/PetsController");
 router.route("/bids").get(bidsCtrl.index);
 router.route("/bids/add").post(bidsCtrl.store);
 router.route("/bids/:id").get(bidsCtrl.show);
+router.route("/auctions").get(bidsCtrl.auctionsCalc);
 
 //Users
 router.route("/users").get(usersCtrl.index);
