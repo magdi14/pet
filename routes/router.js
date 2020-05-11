@@ -9,7 +9,7 @@ const petsCtrl = require("../app/controllers/PetsController");
 
 //Bids
 router.route("/bids").get(bidsCtrl.index);
-router.route("/bids").post(bidsCtrl.store);
+router.route("/bids/add").post(bidsCtrl.store);
 router.route("/bids/:id").get(bidsCtrl.show);
 
 //Users
@@ -22,18 +22,6 @@ router.route("/pets").get(petsCtrl.index);
 router.route("/pets").post(petsCtrl.store);
 router.route("/pets/:id").get(petsCtrl.show);
 
-//Permissions
-router.route("/permissions").get(permissionsCtrl.index);
-router.route("/permissions/:id").get(permissionsCtrl.show);
-router.route("/permissions").post(permissionsCtrl.store);
-router.route("/permissions/:id").delete(permissionsCtrl.destroy);
-
-//Roles
-router.route("/roles").get(rolesCtrl.index);
-router.route("/roles").post(rolesCtrl.store);
-router.route("/roles/:id").get(rolesCtrl.show);
-router.route("/roles/:id").delete(rolesCtrl.destroy);
-router.route("/roles/:id").put(rolesCtrl.update);
 /*
 const userCtrl = require('../app/controller/UsersController');
 
